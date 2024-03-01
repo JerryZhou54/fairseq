@@ -17,7 +17,7 @@ Use `ALL` for preprocessing all the glue tasks.
 ### 3) Fine-tuning on GLUE task:
 Example fine-tuning cmd for `RTE` task
 ```bash
-ROBERTA_PATH='http://dl.fbaipublicfiles.com/fairseq/models/roberta.base.tar.gz'
+ROBERTA_PATH='/home/hice1/wzhou322/scratch/lab2/roberta.base/model.pt'
 
 CUDA_VISIBLE_DEVICES=0 fairseq-hydra-train --config-dir examples/roberta/config/finetuning --config-name rte task.data=/home/hice1/wzhou322/scratch/lab2/fairseq/RTE-bin checkpoint.restore_file=$ROBERTA_PATH
 ```
